@@ -1,6 +1,3 @@
-console.log('Client JS');
-
-
 fetch('http://localhost:3000/weather?address=miami')
     .then((res) => {
       res.json().then((data) => {
