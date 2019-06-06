@@ -9,7 +9,7 @@ const forecast = (lat, long, cb) => {
     } else if(body.error) {
       cb('Cant find what you are looking for', undefined)
     } else {
-      cb(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+      cb(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain. The high for today is ' + body.daily.data[0].temperatureHigh + ' degrees')
     }
   })
 }
